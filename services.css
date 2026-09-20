@@ -1,0 +1,820 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #183660;
+    background: white;
+}
+
+
+
+/* ================= HEADER ================= */
+
+header {
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: white;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 27px;
+}
+
+.logo-text {
+    color: #17679f;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+nav a {
+    color: #18345a;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #087fc1;
+}
+
+nav a.active {
+    color: #087fc1;
+    font-weight: bold;
+}
+
+
+
+/* ================= LOGIN ================= */
+
+.login-btn {
+    background: #176da5;
+
+    color: white !important;
+
+    padding: 13px 27px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: #0d5d91;
+}
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 440px;
+
+    background: #eef8fd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 65px 12%;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 580px;
+}
+
+.hero-label {
+
+    color: #e34e55;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+
+    color: #183660;
+
+    font-size: 50px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #087fc1;
+}
+
+.hero-text {
+
+    max-width: 500px;
+
+    color: #637b91;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+
+/* Hero Button */
+
+.hero-button {
+
+    display: inline-block;
+
+    background: #087fc1;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 23px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+
+    background: #075f91;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+
+    width: 320px;
+
+    height: 245px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 15px 35px rgba(20, 90, 130, 0.12);
+
+    position: relative;
+}
+
+
+
+/* Route */
+
+.route {
+
+    position: absolute;
+
+    top: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 220px;
+}
+
+.location-dot {
+
+    width: 14px;
+
+    height: 14px;
+
+    background: #087fc1;
+
+    border-radius: 50%;
+}
+
+.route-line {
+
+    height: 3px;
+
+    flex: 1;
+
+    background: #b8dcec;
+}
+
+
+
+/* Truck */
+
+.truck {
+
+    font-size: 65px;
+
+    margin-top: 30px;
+
+    animation: moveTruck 2s infinite alternate;
+}
+
+@keyframes moveTruck {
+
+    from {
+        transform: translateX(-7px);
+    }
+
+    to {
+        transform: translateX(7px);
+    }
+
+}
+
+.hero-card h3 {
+
+    color: #183660;
+
+    font-size: 17px;
+
+    margin-top: 10px;
+}
+
+.hero-card p {
+
+    color: #71869a;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+
+/* ================= SERVICES ================= */
+
+.services {
+
+    padding: 75px 8%;
+
+    background: white;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+}
+
+.section-label {
+
+    color: #087fc1;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+
+    color: #183660;
+
+    font-size: 35px;
+
+    line-height: 1.25;
+}
+
+.section-heading h2 span {
+    color: #087fc1;
+}
+
+.section-heading > p:last-child {
+
+    color: #71869a;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-top: 12px;
+}
+
+
+
+/* ================= SERVICE CARDS ================= */
+
+.service-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+
+    min-height: 285px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e2edf3;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 20px rgba(30, 90, 130, 0.06);
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 30px rgba(30, 90, 130, 0.12);
+
+    border-color: #c8e2ef;
+}
+
+
+
+/* Icons */
+
+.icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.icon.blue {
+    background: #eaf7ff;
+}
+
+.icon.green {
+    background: #ecfaf4;
+}
+
+.icon.orange {
+    background: #fff5e9;
+}
+
+.icon.purple {
+    background: #f4efff;
+}
+
+
+
+/* Number */
+
+.number {
+
+    position: absolute;
+
+    top: 28px;
+
+    right: 25px;
+
+    color: #b6c7d4;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+
+/* Card Text */
+
+.service-card h3 {
+
+    color: #183660;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+
+    color: #71869a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    min-height: 72px;
+
+    margin-bottom: 15px;
+}
+
+.service-card a {
+
+    color: #087fc1;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.service-card a:hover {
+    color: #e34e55;
+}
+
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.process {
+    background: #ffffff;
+    padding: 75px 7% 95px;   /* increased bottom gap */
+}
+
+.steps {
+    max-width: 1200px;
+    margin: 50px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 22px;
+    flex-wrap: nowrap;
+}
+
+.step {
+    width: 240px;
+    min-height: 175px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    padding: 25px 20px;
+    text-align: center;
+
+    box-shadow: 0 7px 22px rgba(30, 90, 130, 0.07);
+
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 28px rgba(30, 90, 130, 0.12);
+}
+
+
+/* Step Number */
+
+.step-number {
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #087fc1;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Step Content */
+
+.step-content {
+    text-align: center;
+}
+
+.step-content h3 {
+    color: #183660;
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.step-content p {
+    color: #71869a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ARROWS
+========================= */
+
+.step-arrow {
+    color: #087fc1;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+
+    /* Keeps arrow horizontal */
+    transform: rotate(0deg);
+}
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    min-height: 145px;
+
+    padding: 32px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #12375d;
+
+    color: white;
+}
+
+.footer-logo h3 {
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+}
+
+.footer-logo p {
+
+    color: #b7cce0;
+
+    font-size: 13px;
+
+    margin-top: 6px;
+}
+
+.footer-center p,
+.footer-contact p {
+
+    color: #c8d8e6;
+
+    font-size: 13px;
+}
+
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 0 6%;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+
+    footer {
+        padding: 30px 6%;
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 750px) {
+
+    header {
+
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 45px;
+
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-text {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-card {
+
+        width: 290px;
+
+        height: 220px;
+    }
+
+
+    /* Services */
+
+    .services {
+        padding: 60px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .service-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 360px;
+    }
+
+
+    /* Vertical Process */
+
+    .process {
+        padding: 60px 6%;
+    }
+
+    .steps {
+        max-width: 100%;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+
+    /* Footer */
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 15px;
+
+        padding: 35px 20px;
+    }
+
+}
+
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-card {
+        width: 270px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .step {
+        gap: 15px;
+    }
+
+    .step-number {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+
+}
