@@ -1,25 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Track Shipment - ShipTracker</title>
-
     <link rel="stylesheet" href="track.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- HEADER -->
     <header>
+
         <div class="logo">
             <span class="logo-icon">📦</span>
             <span class="logo-text">SHIPTRACKER</span>
         </div>
 
-        <nav>
+        <!-- Hamburger Button -->
+        <button class="menu-btn" id="menuBtn"
+            type="button" aria-label="Toggle navigation"
+            aria-expanded="false">☰</button>
+
+        <nav class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="track.html" class="active">Track Shipment</a>
@@ -27,11 +32,11 @@
             <a href="contact.html">Contact</a>
             <a href="login.html" class="login-btn">Login</a>
         </nav>
+
     </header>
 
 
-    <!-- ================= TRACKING HERO ================= -->
-
+    <!-- TRACKING HERO -->
     <section class="tracking-hero">
 
         <div class="hero-content">
@@ -52,12 +57,9 @@
             </p>
 
             <!-- Tracking Form -->
-
             <div class="tracking-form">
 
-                <label for="tracking-id">
-                    Enter Tracking ID
-                </label>
+                <label for="trackingInput">Enter Tracking ID</label>
 
                 <div class="input-area">
 
@@ -66,101 +68,90 @@
 
                         <input
                             type="text"
-                            id="tracking-id"
+                            id="trackingInput"
                             placeholder="e.g. ST123456789"
+                            maxlength="11"
+                            autocomplete="off"
                         >
                     </div>
 
-                    <button type="button">
+                    <button type="button" id="trackBtn">
                         Track Shipment →
                     </button>
 
                 </div>
 
                 <p class="example">
-                    Enter the tracking ID provided with your shipment.
+                    Enter 2 alphabets followed by 9 digits.
                 </p>
+
+                <p id="trackingMessage" class="tracking-message"></p>
 
             </div>
 
         </div>
 
 
-        <!-- ================= TRACKING CARD ================= -->
-
-        <div class="tracking-card">
+        <!-- TRACKING CARD -->
+        <div class="tracking-card" id="trackingCard">
 
             <div class="card-header">
+
                 <div class="package-icon">📦</div>
 
                 <div>
                     <h3>Shipment Progress</h3>
-                    <p>Track your package journey</p>
+                    <p id="trackingIdDisplay">Tracking ID</p>
                 </div>
+
             </div>
 
 
             <!-- Progress -->
-
             <div class="progress-container">
 
                 <div class="progress-line"></div>
 
                 <div class="progress-item">
-
-                    <div class="progress-circle completed">
-                        ✓
-                    </div>
-
+                    <div class="progress-circle completed">✓</div>
                     <strong>Picked Up</strong>
                     <small>Completed</small>
-
                 </div>
 
-
                 <div class="progress-item">
-
-                    <div class="progress-circle current">
-                        02
-                    </div>
-
+                    <div class="progress-circle current">02</div>
                     <strong>In Transit</strong>
                     <small>Current</small>
-
                 </div>
 
-
                 <div class="progress-item">
-
-                    <div class="progress-circle">
-                        03
-                    </div>
-
+                    <div class="progress-circle">03</div>
                     <strong>Delivered</strong>
                     <small>Pending</small>
-
                 </div>
 
             </div>
 
 
             <!-- Current Status -->
-
             <div class="current-status">
 
                 <div class="status-dot"></div>
 
                 <div>
                     <span>Current Status</span>
-                    <strong>Package is in transit</strong>
+                    <strong id="currentStatusText">
+                        Package is in transit
+                    </strong>
                 </div>
 
             </div>
 
 
+            <!-- Estimated Delivery -->
             <div class="estimated">
                 <span>Estimated Delivery</span>
-                <strong>On the way</strong>
+                <strong id="estimatedDelivery">On the way</strong>
             </div>
 
         </div>
@@ -168,8 +159,7 @@
     </section>
 
 
-    <!-- ================= TRACKING PROCESS ================= -->
-
+    <!-- TRACKING PROCESS -->
     <section class="tracking-process">
 
         <div class="section-heading">
@@ -191,60 +181,34 @@
         <div class="tracking-steps">
 
             <div class="tracking-step">
-
-                <div class="step-number">
-                    01
-                </div>
-
+                <div class="step-number">01</div>
                 <h3>Enter Tracking ID</h3>
-
                 <p>
                     Enter the tracking ID provided
                     with your shipment.
                 </p>
-
             </div>
 
-
-            <div class="tracking-arrow">
-                →
-            </div>
-
+            <div class="tracking-arrow">→</div>
 
             <div class="tracking-step">
-
-                <div class="step-number">
-                    02
-                </div>
-
+                <div class="step-number">02</div>
                 <h3>Check Status</h3>
-
                 <p>
-                    View the latest status and
+                    View the sample status and
                     movement of your package.
                 </p>
-
             </div>
 
-
-            <div class="tracking-arrow">
-                →
-            </div>
-
+            <div class="tracking-arrow">→</div>
 
             <div class="tracking-step">
-
-                <div class="step-number">
-                    03
-                </div>
-
+                <div class="step-number">03</div>
                 <h3>Get Delivered</h3>
-
                 <p>
                     Stay informed until your package
                     reaches its destination.
                 </p>
-
             </div>
 
         </div>
@@ -252,15 +216,14 @@
     </section>
 
 
-  <!-- ================= TRACKING INFORMATION ================= -->
-
+    <!-- TRACKING INFORMATION -->
     <section class="tracking-info">
 
         <div class="info-card">
             <div class="info-icon">🚚</div>
-            <h3>Real-Time Updates</h3>
+            <h3>Shipment Updates</h3>
             <p>
-                Stay updated with the latest movement
+                Stay updated with the movement
                 of your shipment.
             </p>
         </div>
@@ -278,16 +241,15 @@
             <div class="info-icon">🔔</div>
             <h3>Delivery Updates</h3>
             <p>
-                Keep track of your package until it
-                reaches its final destination.
+                Keep track of your package until
+                final delivery.
             </p>
         </div>
 
     </section>
 
 
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-logo">
@@ -304,6 +266,9 @@
         </div>
 
     </footer>
+
+
+    <script src="shiptracker.js"></script>
 
 </body>
 </html>
