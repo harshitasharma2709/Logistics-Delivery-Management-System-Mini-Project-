@@ -1,3 +1,4 @@
+
 /* ================= GENERAL ================= */
 
 * {
@@ -13,21 +14,17 @@ body {
 }
 
 
-
 /* ================= HEADER ================= */
 
 header {
     height: 85px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 0 8%;
-
     background: white;
-
     border-bottom: 1px solid #eeeeee;
+    position: relative;
 }
 
 
@@ -45,57 +42,58 @@ header {
 
 .logo-text {
     color: #17679f;
-
     font-size: 21px;
-
     font-weight: bold;
-
     letter-spacing: 1px;
 }
 
 
-
 /* ================= NAVIGATION ================= */
 
-nav {
+.nav-links {
     display: flex;
     align-items: center;
-
     gap: 32px;
 }
 
-nav a {
+.nav-links a {
     color: #18345a;
-
     text-decoration: none;
-
     font-size: 15px;
-
     transition: 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #087fc1;
 }
 
-nav a.active {
+.nav-links a.active {
     color: #087fc1;
     font-weight: bold;
 }
 
+
+/* ================= HAMBURGER BUTTON ================= */
+
+.menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #17679f;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 5px;
+}
 
 
 /* ================= LOGIN ================= */
 
 .login-btn {
     background: #176da5;
-
     color: white !important;
-
     padding: 13px 27px;
-
     border-radius: 6px;
-
     font-weight: bold;
 }
 
@@ -104,19 +102,14 @@ nav a.active {
 }
 
 
-
 /* ================= HERO ================= */
 
 .hero {
-
     min-height: 440px;
-
     background: #eef8fd;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     padding: 65px 12%;
@@ -130,26 +123,17 @@ nav a.active {
 }
 
 .hero-label {
-
     color: #e34e55;
-
     font-size: 13px;
-
     font-weight: bold;
-
     letter-spacing: 3px;
-
     margin-bottom: 18px;
 }
 
 .hero h1 {
-
     color: #183660;
-
     font-size: 50px;
-
     line-height: 1.15;
-
     margin-bottom: 20px;
 }
 
@@ -158,129 +142,85 @@ nav a.active {
 }
 
 .hero-text {
-
     max-width: 500px;
-
     color: #637b91;
-
     font-size: 16px;
-
     line-height: 1.7;
-
     margin-bottom: 25px;
 }
-
 
 
 /* Hero Button */
 
 .hero-button {
-
     display: inline-block;
-
     background: #087fc1;
-
     color: white;
-
     text-decoration: none;
-
     padding: 14px 23px;
-
     border-radius: 6px;
-
     font-size: 14px;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
 .hero-button:hover {
-
     background: #075f91;
-
     transform: translateY(-2px);
 }
-
 
 
 /* ================= HERO CARD ================= */
 
 .hero-card {
-
     width: 320px;
-
     height: 245px;
-
     background: white;
-
     border-radius: 18px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
 
     box-shadow: 0 15px 35px rgba(20, 90, 130, 0.12);
-
     position: relative;
 }
-
 
 
 /* Route */
 
 .route {
-
     position: absolute;
-
     top: 55px;
-
     display: flex;
-
     align-items: center;
-
     width: 220px;
 }
 
 .location-dot {
-
     width: 14px;
-
     height: 14px;
-
     background: #087fc1;
-
     border-radius: 50%;
 }
 
 .route-line {
-
     height: 3px;
-
     flex: 1;
-
     background: #b8dcec;
 }
-
 
 
 /* Truck */
 
 .truck {
-
     font-size: 65px;
-
     margin-top: 30px;
-
     animation: moveTruck 2s infinite alternate;
 }
 
 @keyframes moveTruck {
-
     from {
         transform: translateX(-7px);
     }
@@ -288,66 +228,45 @@ nav a.active {
     to {
         transform: translateX(7px);
     }
-
 }
 
 .hero-card h3 {
-
     color: #183660;
-
     font-size: 17px;
-
     margin-top: 10px;
 }
 
 .hero-card p {
-
     color: #71869a;
-
     font-size: 13px;
-
     margin-top: 5px;
 }
-
 
 
 /* ================= SERVICES ================= */
 
 .services {
-
     padding: 75px 8%;
-
     background: white;
 }
 
 .section-heading {
-
     text-align: center;
-
     max-width: 650px;
-
     margin: 0 auto 45px;
 }
 
 .section-label {
-
     color: #087fc1;
-
     font-size: 13px;
-
     font-weight: bold;
-
     letter-spacing: 2px;
-
     margin-bottom: 12px;
 }
 
 .section-heading h2 {
-
     color: #183660;
-
     font-size: 35px;
-
     line-height: 1.25;
 }
 
@@ -356,81 +275,57 @@ nav a.active {
 }
 
 .section-heading > p:last-child {
-
     color: #71869a;
-
     font-size: 15px;
-
     line-height: 1.6;
-
     margin-top: 12px;
 }
-
 
 
 /* ================= SERVICE CARDS ================= */
 
 .service-container {
-
     max-width: 1100px;
-
     margin: auto;
 
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
 }
 
 .service-card {
-
     min-height: 285px;
-
     padding: 25px;
 
     background: white;
-
     border: 1px solid #e2edf3;
-
     border-radius: 12px;
 
     box-shadow: 0 6px 20px rgba(30, 90, 130, 0.06);
 
     position: relative;
-
     transition: 0.3s;
 }
 
 .service-card:hover {
-
     transform: translateY(-7px);
-
     box-shadow: 0 15px 30px rgba(30, 90, 130, 0.12);
-
     border-color: #c8e2ef;
 }
-
 
 
 /* Icons */
 
 .icon {
-
     width: 58px;
-
     height: 58px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 12px;
-
     font-size: 27px;
-
     margin-bottom: 20px;
 }
 
@@ -451,58 +346,39 @@ nav a.active {
 }
 
 
-
 /* Number */
 
 .number {
-
     position: absolute;
-
     top: 28px;
-
     right: 25px;
 
     color: #b6c7d4;
-
     font-size: 13px;
-
     font-weight: bold;
 }
-
 
 
 /* Card Text */
 
 .service-card h3 {
-
     color: #183660;
-
     font-size: 18px;
-
     margin-bottom: 12px;
 }
 
 .service-card p {
-
     color: #71869a;
-
     font-size: 14px;
-
     line-height: 1.7;
-
     min-height: 72px;
-
     margin-bottom: 15px;
 }
 
 .service-card a {
-
     color: #087fc1;
-
     text-decoration: none;
-
     font-size: 13px;
-
     font-weight: bold;
 }
 
@@ -511,14 +387,11 @@ nav a.active {
 }
 
 
-
-/* =========================
-   HOW IT WORKS
-========================= */
+/* ================= HOW IT WORKS ================= */
 
 .process {
     background: #ffffff;
-    padding: 75px 7% 95px;   /* increased bottom gap */
+    padding: 75px 7% 95px;
 }
 
 .steps {
@@ -568,7 +441,6 @@ nav a.active {
     justify-content: center;
 
     border-radius: 50%;
-
     background: #087fc1;
     color: white;
 
@@ -596,67 +468,47 @@ nav a.active {
 }
 
 
-/* =========================
-   ARROWS
-========================= */
+/* ================= ARROWS ================= */
 
 .step-arrow {
     color: #087fc1;
-
     font-size: 30px;
     font-weight: bold;
-
     flex-shrink: 0;
-
-    /* Keeps arrow horizontal */
     transform: rotate(0deg);
 }
-
 
 
 /* ================= FOOTER ================= */
 
 footer {
-
     min-height: 145px;
-
     padding: 32px 10%;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     background: #12375d;
-
     color: white;
 }
 
 .footer-logo h3 {
-
     font-size: 20px;
-
     letter-spacing: 1px;
 }
 
 .footer-logo p {
-
     color: #b7cce0;
-
     font-size: 13px;
-
     margin-top: 6px;
 }
 
 .footer-center p,
 .footer-contact p {
-
     color: #c8d8e6;
-
     font-size: 13px;
 }
-
 
 
 /* ================= TABLET ================= */
@@ -665,6 +517,10 @@ footer {
 
     header {
         padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 20px;
     }
 
     .hero {
@@ -683,42 +539,59 @@ footer {
 }
 
 
+/* ================= HAMBURGER MENU ================= */
+/* Hamburger appears only at 900px and below */
 
-/* ================= MOBILE ================= */
-
-@media (max-width: 750px) {
+@media (max-width: 900px) {
 
     header {
-
         height: auto;
+        min-height: 75px;
 
-        padding: 20px;
+        padding: 15px 7%;
 
-        flex-direction: column;
-
-        gap: 20px;
-    }
-
-    nav {
-
+        flex-direction: row;
         flex-wrap: wrap;
-
-        justify-content: center;
+        justify-content: space-between;
 
         gap: 15px;
     }
 
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 20px;
+
+        padding: 15px 0 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+}
+
+
+/* ================= MOBILE LAYOUT ================= */
+
+@media (max-width: 750px) {
 
     /* Hero */
 
     .hero {
-
         flex-direction: column;
-
         text-align: center;
-
         gap: 45px;
-
         padding: 55px 20px;
     }
 
@@ -727,16 +600,12 @@ footer {
     }
 
     .hero-text {
-
         margin-left: auto;
-
         margin-right: auto;
     }
 
     .hero-card {
-
         width: 290px;
-
         height: 220px;
     }
 
@@ -752,14 +621,12 @@ footer {
     }
 
     .service-container {
-
         grid-template-columns: 1fr;
-
         max-width: 360px;
     }
 
 
-    /* Vertical Process */
+    /* Process */
 
     .process {
         padding: 60px 6%;
@@ -767,9 +634,13 @@ footer {
 
     .steps {
         max-width: 100%;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .step {
+        width: 100%;
+        max-width: 360px;
         padding: 20px;
     }
 
@@ -777,18 +648,13 @@ footer {
     /* Footer */
 
     footer {
-
         flex-direction: column;
-
         text-align: center;
-
         gap: 15px;
-
         padding: 35px 20px;
     }
 
 }
-
 
 
 /* ================= SMALL MOBILE ================= */
@@ -805,10 +671,6 @@ footer {
 
     .section-heading h2 {
         font-size: 27px;
-    }
-
-    .step {
-        gap: 15px;
     }
 
     .step-number {
