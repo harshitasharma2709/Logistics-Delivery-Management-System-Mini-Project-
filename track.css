@@ -1,0 +1,933 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17345f;
+    background: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 85px;
+    padding: 0 18%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e5edf3;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.logo-icon {
+    font-size: 25px;
+}
+
+.logo-text {
+    color: #17679f;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #18345a;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #087fc1;
+}
+
+nav a.active {
+    color: #087fc1;
+    font-weight: bold;
+}
+
+.login-btn {
+    background: #176da5;
+    color: white !important;
+
+    padding: 15px 32px;
+    border-radius: 6px;
+}
+
+.login-btn:hover {
+    background: #087fc1;
+}
+
+
+/* =========================
+   TRACKING HERO
+========================= */
+
+.tracking-hero {
+    min-height: 540px;
+
+    padding: 80px 10%;
+
+    background: #eef9ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decorative Circle */
+
+.tracking-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(8, 127, 193, 0.05);
+
+    right: -80px;
+    top: -80px;
+}
+
+.tracking-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 25px solid rgba(8, 127, 193, 0.04);
+
+    left: -70px;
+    bottom: -80px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    width: 52%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #087fc1;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.hero-label span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #e34e55;
+}
+
+.hero-content h1 {
+    color: #183660;
+
+    font-size: 52px;
+
+    line-height: 1.15;
+
+    margin: 18px 0;
+}
+
+.hero-content h1 span {
+    color: #087fc1;
+}
+
+.hero-content > p {
+    color: #71869a;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 530px;
+}
+
+
+/* =========================
+   TRACKING FORM
+========================= */
+
+.tracking-form {
+    margin-top: 32px;
+
+    max-width: 630px;
+
+    background: white;
+
+    padding: 24px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 12px 35px rgba(30, 90, 130, 0.10);
+
+    position: relative;
+    z-index: 2;
+}
+
+.tracking-form label {
+    display: block;
+
+    color: #183660;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    height: 52px;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #d8e5ed;
+
+    border-radius: 7px;
+
+    padding: 0 15px;
+
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: #087fc1;
+
+    box-shadow: 0 0 0 3px rgba(8, 127, 193, 0.08);
+}
+
+.input-box span {
+    color: #087fc1;
+
+    font-size: 22px;
+
+    margin-right: 9px;
+}
+
+.input-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 14px;
+
+    color: #183660;
+}
+
+.input-box input::placeholder {
+    color: #9aabb8;
+}
+
+.input-area button {
+    height: 52px;
+
+    padding: 0 23px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #087fc1;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.input-area button:hover {
+    background: #17679f;
+
+    transform: translateY(-2px);
+}
+
+.example {
+    color: #9aabb8;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   TRACKING CARD
+========================= */
+
+.tracking-card {
+    width: 450px;
+
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(30, 90, 130, 0.11);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Card Header */
+
+.card-header {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #edf2f5;
+}
+
+.package-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef9ff;
+
+    font-size: 25px;
+}
+
+.card-header h3 {
+    color: #183660;
+
+    font-size: 18px;
+
+    margin-bottom: 4px;
+}
+
+.card-header p {
+    color: #8a9aaa;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    margin-top: 35px;
+}
+
+.progress-line {
+    position: absolute;
+
+    height: 4px;
+
+    background: #dce7ed;
+
+    left: 32px;
+    right: 32px;
+
+    top: 20px;
+
+    z-index: 0;
+}
+
+.progress-item {
+    width: 90px;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.progress-circle {
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 10px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e6eef2;
+
+    color: #8497a5;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    border: 4px solid white;
+}
+
+.progress-circle.completed,
+.progress-circle.current {
+    background: #087fc1;
+
+    color: white;
+}
+
+.progress-circle.current {
+    box-shadow: 0 0 0 5px rgba(8, 127, 193, 0.10);
+}
+
+.progress-item strong {
+    display: block;
+
+    color: #183660;
+
+    font-size: 12px;
+}
+
+.progress-item small {
+    display: block;
+
+    color: #8a9aaa;
+
+    font-size: 10px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   CURRENT STATUS
+========================= */
+
+.current-status {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #eef9ff;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    margin-top: 30px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #087fc1;
+
+    box-shadow: 0 0 0 5px rgba(8, 127, 193, 0.10);
+
+    flex-shrink: 0;
+}
+
+.current-status span {
+    display: block;
+
+    color: #8a9aaa;
+
+    font-size: 10px;
+
+    margin-bottom: 3px;
+}
+
+.current-status strong {
+    color: #183660;
+
+    font-size: 13px;
+}
+
+
+/* Estimated Delivery */
+
+.estimated {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding: 0 3px;
+}
+
+.estimated span {
+    color: #8a9aaa;
+
+    font-size: 12px;
+}
+
+.estimated strong {
+    color: #087fc1;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   TRACKING PROCESS
+========================= */
+
+.tracking-process {
+    background: white;
+
+    padding: 80px 7% 95px;
+}
+
+.section-heading {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+.section-heading > span {
+    color: #087fc1;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #183660;
+
+    font-size: 38px;
+
+    margin: 14px 0;
+}
+
+.section-heading h2 span {
+    color: #087fc1;
+}
+
+.section-heading p {
+    color: #71869a;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TRACKING STEPS
+========================= */
+
+.tracking-steps {
+    max-width: 1050px;
+
+    margin: 50px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: nowrap;
+}
+
+.tracking-step {
+    width: 280px;
+
+    min-height: 180px;
+
+    padding: 28px 22px;
+
+    background: white;
+
+    border: 1px solid #e4edf2;
+
+    border-radius: 13px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(30, 90, 130, 0.06);
+
+    transition: 0.3s;
+
+    flex-shrink: 0;
+}
+
+.tracking-step:hover {
+    transform: translateY(-7px);
+
+    border-color: #c8e6f5;
+
+    box-shadow: 0 15px 30px rgba(30, 90, 130, 0.10);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #087fc1;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.tracking-step h3 {
+    color: #183660;
+
+    font-size: 17px;
+
+    margin-bottom: 9px;
+}
+
+.tracking-step p {
+    color: #71869a;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.tracking-arrow {
+    color: #087fc1;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   INFORMATION CARDS
+========================= */
+
+.tracking-info {
+    background: #eef9ff;
+
+    padding: 65px 7%;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.info-card {
+    width: 300px;
+
+    padding: 30px 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 7px 22px rgba(30, 90, 130, 0.06);
+}
+
+.info-icon {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: #183660;
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #71869a;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    min-height: 125px;
+
+    padding: 30px 7%;
+
+    background: #173f66;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-logo h2 {
+    font-size: 21px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+.footer-logo p {
+    color: #d6e7f3;
+
+    font-size: 13px;
+}
+
+.copyright {
+    color: #d6e7f3;
+
+    font-size: 13px;
+}
+
+.footer-contact {
+    color: white;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 0 7%;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .tracking-hero {
+        padding: 65px 7%;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .tracking-card {
+        width: 420px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    header {
+        height: auto;
+
+        padding: 20px 7%;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .tracking-hero {
+        flex-direction: column;
+
+        padding: 60px 7%;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-label {
+        justify-content: center;
+    }
+
+    .hero-content > p {
+        margin: auto;
+    }
+
+    .tracking-form {
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+    }
+
+    .tracking-card {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .tracking-info {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .tracking-steps {
+        flex-direction: column;
+    }
+
+    .tracking-arrow {
+        transform: rotate(90deg);
+    }
+
+    .tracking-step {
+        width: 100%;
+
+        max-width: 350px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .input-box,
+    .input-area button {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .tracking-card {
+        padding: 25px 18px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+}
